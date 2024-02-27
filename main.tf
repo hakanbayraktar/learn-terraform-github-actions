@@ -16,7 +16,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-2"
 }
 
 resource "random_pet" "sg" {}
@@ -34,7 +34,7 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 
-  owners = ["286206761753"] # Canonical
+  owners = ["099720109477"] # Canonical
 }
 
 resource "aws_instance" "web" {
